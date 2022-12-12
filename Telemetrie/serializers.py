@@ -1,5 +1,6 @@
-from Telemetrie.models import Data
 from rest_framework import serializers
+#importation du model Data
+from Telemetrie.models import Data
 
 
 class DataSerializer(serializers.HyperlinkedModelSerializer):
