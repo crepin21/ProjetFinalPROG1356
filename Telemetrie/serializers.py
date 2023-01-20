@@ -6,5 +6,5 @@ from Telemetrie.models import Data
 class DataSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Data
-        fields = ['nomUc', 'nomCapteur', 'valeurCapteur']
+        fields = ['Employe']
 

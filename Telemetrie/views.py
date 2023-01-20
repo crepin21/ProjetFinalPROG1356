@@ -1,7 +1,7 @@
-#  Titre      : ProjetFinal
+#  Titre      : Rattrapage
 #  Auteur     : Crepin Vardin Fouelefack
-#  Date       : 25/09/2022
-#  Description: gere l'abrobation d'un pret de maison
+#  Date       : 20/01/2022
+#  Description: gere la liste des employes 
 #  Version    : 0.0.1
 #  Sources    : Enregistrer les donnees provenants d'une requette POST https://pythonguides.com/django-get-all-data-from-post-request/
 #               Renvoyer les donnees par Json                          https://simpleisbetterthancomplex.com/tutorial/2016/07/27/how-to-return-json-encoded-response.html
@@ -29,19 +29,10 @@ def validate(request):
       
       #Enregistrement des valeurs des objets de Data
       
-      NomMicrocontoleur = request.POST["nomUc"]
-      NomDuCapteur = request.POST["nomCapteur"]
-      ValeurDuCapteur = request.POST["valeurCapteur"]
-      
-      #Affichage des valeurs dans le terminal
-      print(NomMicrocontoleur)
-      print(NomDuCapteur)
-      print(ValeurDuCapteur)
+      NomMicrocontoleur = request.POST["Employe"]
       
       data               = Data()
-      data.nomUc         = NomMicrocontoleur
-      data.nomCapteur    = NomDuCapteur
-      data.valeurCapteur = ValeurDuCapteur
+      data.Employe         = NomMicrocontoleur
       data.save() #Sauvegarde dans la BD
       return HttpResponse('<h1>Post Request !</h1>') #Message de confirmation
    
